@@ -11,6 +11,8 @@
       {
         "image-alt": "off"
       }
-    ]
+    ],
+    "axe/forms": "off",
+    "scoped-svg-styles": "off"
   }
 }
