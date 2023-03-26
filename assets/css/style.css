@@ -780,7 +780,7 @@ span {
 }
 
 footer {
-  background: #f1f1f1;
+  background: hsl(229, 98%, 66%);
   padding: 90px 0;
 }
 
@@ -894,3 +894,30 @@ footer {
 }
 
 /*# sourceMappingURL=style.css.map */
+ @media screen and (max-width:328px) {
+  .main-wrapper__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  padding: -2rem;
+  margin-left: 24px;
+  font-size: 17px;
+  }
+  .main-banner__button, .main-wrapper__button .mod-get, .main-wrapper__button .mod-learn {
+    padding: 17px 17px 17px 17px;
+    border: none;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 100%, 69%);
+
+}
+.main-wrapper__button {
+  display: flex;
+  gap: 1rem;
+  margin-top: 7px;
+  flex-direction: column;
+}
+ }
