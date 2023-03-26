@@ -84,7 +84,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.main-nav {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -94,24 +94,26 @@ html {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
 }
-.main-nav__list {
+.nav-bar ul{
   display: flex;
-  align-items: center;
-  align-content: center;
-  gap: 1rem;
 }
-.main-nav__list a {
+.nav-bar ul li a{
+  display: block;
+  color: #fefefe;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+  list-style: none;
   text-decoration: none;
-  color: white;
 }
-.main-nav__list a:hover {
-  color: hsl(229, 98%, 66%);
-  transform: scale(1.3, 0.7);
-  display: inline-block;
+
+.nav-bar ul li a:hover{
+  color: #11101b;
+  background: #fefefe;
 }
-.main-nav__image {
-  width: 40px;
-}
+
 
 .main-wrapper {
   background-image: url(../images/cinema.png);
@@ -796,7 +798,7 @@ footer {
 }
 
 .logo {
-  width: 180px;
+  width: 80px;
 }
 
 .social-media {
@@ -871,6 +873,9 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.hamburger{
+  display: none;
+}
 
 @media screen and (max-width: 960px) {
   .footer-container {
@@ -920,4 +925,45 @@ footer {
   margin-top: 7px;
   flex-direction: column;
 }
+ }
+ @media screen and (max-width:880px) {
+  .hamburger{
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line{
+    width: 30px;
+    height: 3px;
+    background-color: #fefefe;
+    margin: 6px 0;
+  }
+  .nav-bar{
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #11101b;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+  .nav-bar.active{
+    height: 450px;
+  }
+  .nav-bar ul{
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar.active ul{
+    opacity: 1;
+  }
+  .nav-bar ul li a{
+    margin-bottom: 12px;
+  }
+  
  }
